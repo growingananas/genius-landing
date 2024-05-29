@@ -1,0 +1,215 @@
+.header {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+    padding: 3px 0px 3px 0px;
+
+    .page__menu {
+      display: none;
+  
+      @media (min-width: 1440px) {
+        display: block;
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        height: 18px;
+      }
+    }
+  
+    .call-to-action-btn {
+      display: none;
+  
+      @include onTablet {
+        display: block;
+        background-color: transparent;
+        padding: 12px 44px 12px 44px;
+        border-radius: 10px;
+        border: 1px solid white;
+        cursor: pointer;
+  
+        &:hover {
+          scale: 1.1;
+          color: $accent-color; 
+          border: 1px solid $accent-color; 
+        }
+      }
+    }
+  
+    .logo {
+      @include onTablet {
+        height: 34px;
+      }
+    }
+  }
+
+  &__center {
+    padding-inline: 2px;
+    margin-top: 40px;
+    @include onTablet {
+      padding-inline: 1px;
+      margin-top: 60px;
+    }
+
+    ul {
+      display: flex;
+      gap: 26px;
+
+
+      li {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+
+        &:last-child {
+          display: none;
+
+          @include onTablet {
+            display: flex;
+          }
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include onDesktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .txt-part {
+      &__above {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+
+        p {
+          &:first-child {
+            span {
+              font-size: 96px;
+              font-weight: 700;
+              text-align: left;
+              color: $accent-color;
+              text-transform: uppercase;
+            }  
+          }
+          &:last-child {
+            padding-top: 26px;
+            width: 226px;
+            overflow-wrap: break-word;
+            @include onTablet {
+              font-size: 16px;
+            }
+            span {
+              @extend %strong-text-style;
+            }
+          }
+        }
+      }
+      &__bottom {
+        font-size: 44px;
+        font-weight: 700;
+        text-align: left;
+        text-transform: uppercase;
+        margin-top: -14px;
+      }
+    }
+
+    .rating {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-top: 20px;
+      p,span {
+        @include onTablet {
+          font-size: 18px;
+        }
+      }
+      span {
+        @extend %strong-text-style;
+        
+      }
+    }
+
+    .main-text {
+      margin-top: 40px;
+      font-size: 16px;
+      max-width: 267px;
+      @include onTablet {
+        font-size: 26px;
+        max-width: 532px;
+      }
+      @include onDesktop {
+        margin-top: 60px;
+      }
+
+      span {
+        @extend %strong-text-style;
+        font-size: 16px;
+        @include onTablet {
+        font-size: 26px;
+        }
+      }
+    }
+
+    .img-part {
+      position: relative;
+      height: 344px;
+      margin-top: 40px;
+
+      @include onTablet {
+        height: 593.67px;
+      }
+
+      @include onDesktop {
+        width: 604.34px;
+        margin-top: 0;
+      }
+
+      .brain {
+        position: absolute;
+        width: 193.19px;
+
+        @include onTablet {
+          width: 312px;
+        }
+      }
+      .speakers {
+        position: absolute;
+        right: 0;
+        width: 88px;
+        @include onTablet {
+          width: 165px;
+        }
+      }
+      .hand {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 115.04px;
+
+        @include onTablet {
+          width: 188px;
+        }
+      }
+      .tech {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 202.96px;
+        @include onTablet {
+          width: 396px;
+        }
+      }
+    }
+  }
+}

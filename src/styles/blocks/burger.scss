@@ -1,0 +1,43 @@
+.menu {
+  position: fixed;
+  background-color: $background-color;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out; 
+  transform: translateX(-100%);
+    &.active {
+      transform: translateX(0);
+    } 
+
+    @include onDesktop {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__list {
+    margin-block: 20px;
+  }
+  &__item{
+    padding: 10px;
+  }
+  &__link {
+    font-size: 24px;
+  }
+}
+
+.burger-btn {
+  @include onDesktop {
+    display: none;
+  }
+
+  &__close, &__open {
+    height: 36px;
+    font-size: 36px;
+  }
+}

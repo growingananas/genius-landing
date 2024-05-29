@@ -1,11 +1,21 @@
+
 @import 'global.scss';
+@import '../styles/utils/variables';
 @import '../styles/utils/mixins';
+@import '../styles/utils/extends';
+@import '../styles/blocks/burger.scss';
+@import '../styles/blocks/header.scss';
 
 .container {
   margin: 0 auto;
   padding: 20px;
   min-width: 320px;
+  background-image: url(../assets/ellipsis.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+
     @include onTablet  {
+      padding-inline: 0;
       width: 604px;
     }
     @include onDesktop  {
@@ -13,93 +23,35 @@
     }
 }
 
-.header-top {
+.call-to-action {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 42px;
-  padding: 3px 0px 3px 0px;
+  margin-top: 40px;
 
-  .page__menu {
-    display: none;
-
-    @media (min-width: 1440px) {
-      display: block;
-    }
-    ul {
-      display: flex;
-      flex-direction: row;
-      gap: 40px;
-      height: 18px;
-    }
+  @include onTablet {
+    align-items: flex-start;
   }
 
-  .call-to-action-btn {
-    display: none;
-
-    @include onTablet {
-      display: block;
-      background-color: transparent;
-      padding: 12px 44px 12px 44px;
-      border-radius: 10px;
-      border: 1px solid white;
-      cursor: pointer;
-
-      &:hover {
-        scale: 1.1;
-        color: $accent-color; 
-        border: 1px solid $accent-color; 
-      }
-    }
-  }
-
-  .logo {
-    @include onTablet {
-      height: 34px;
-    }
-  }
-}
-
-.menu {
-  position: fixed;
-  background-color: $background-color;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease-in-out; 
-  transform: translateX(-100%);
-    &.active {
-      transform: translateX(0);
-    } 
-
-    @include onDesktop {
-    display: none;
-  }
-
-  &__content {
-    display: flex;
-    justify-content: end;
-  }
-
-  &__list {
-    margin-block: 20px;
-  }
-  &__item{
-    padding: 10px;
-  }
-  &__link {
-    font-size: 24px;
-  }
-}
-
-.burger-btn {
   @include onDesktop {
-    display: none;
+   margin-top: 60px;
   }
 
-  &__close, &__open {
-    height: 36px;
-    font-size: 36px;
+  .call-to-action-btn-filled {
+    width: 227px;
+    height: 42px;
+    padding: 12px 44px 12px 44px;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: $accent-color;
+  }
+
+  p {
+    margin-top: 12px;
+    @include onTablet {
+      font-size: 16px;
+    }
   }
 }
+
