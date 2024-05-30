@@ -61,10 +61,17 @@ h2 {
 font-size: 28px;
 font-weight: 700;
 text-align: left;
-  span {
+  strong {
     color: $accent-color;
     font-size: 28px;
     font-weight: 700;
+    @include onTablet {
+      font-size: 48px;
+    }
+  }
+
+  @include onTablet {
+    font-size: 48px;
   }
 }
 
@@ -75,6 +82,18 @@ h3 {
   @include onTablet {
     font-size: 28px !important;
   }
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  @include onTablet {
+    font-size: 26px;
+  }
+}
+
+strong {
+  font-weight: 700;
 }
 
 

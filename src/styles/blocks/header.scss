@@ -72,7 +72,7 @@
           }
         }
 
-        span {
+        strong {
           display: block;
         }
       }
@@ -94,7 +94,7 @@
 
         p {
           &:first-child {
-            span {
+            strong {
               font-size: 96px;
               font-weight: 700;
               text-align: left;
@@ -109,7 +109,7 @@
             @include onTablet {
               font-size: 16px;
             }
-            span {
+            strong {
               @extend %strong-text-style;
             }
           }
@@ -129,12 +129,12 @@
       gap: 20px;
       align-items: center;
       margin-top: 20px;
-      p,span {
+      p,strong {
         @include onTablet {
           font-size: 18px;
         }
       }
-      span {
+      strong {
         @extend %strong-text-style;
         
       }
@@ -152,7 +152,7 @@
         margin-top: 60px;
       }
 
-      span {
+      strong {
         @extend %strong-text-style;
         font-size: 16px;
         @include onTablet {

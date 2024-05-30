@@ -1,0 +1,18 @@
+body {
+  background-image: url(../assets/ellipsis.svg);
+  background-repeat: no-repeat;
+  background-position: top 60% right;
+}
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  min-width: 320px;
+
+  @include onTablet  {
+    padding-inline: 0;
+    width: 604px;
+  }
+  @include onDesktop  {
+    width: 1230px;
+  }
+}
