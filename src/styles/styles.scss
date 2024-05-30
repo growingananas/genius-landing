@@ -45,6 +45,9 @@
     border-radius: 10px;
     font-weight: 700;
     background-color: $accent-color;
+    &:hover {
+      scale: 1.1;
+    }
   }
 
   p {
@@ -53,5 +56,95 @@
       font-size: 16px;
     }
   }
+}
+
+.why-ai {
+  margin-top: 100px;
+  position: relative;
+  max-width: 580px;
+
+
+  @include onDesktop {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 44px;
+    max-width: 1183px;
+  }
+  h3 {
+    margin-top: 24px;
+  }
+  p {
+    margin-top: 24px;
+    span {
+      @extend %strong-text-style;
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+    @include onTablet {
+      font-size: 20px;
+    }
+  }
+  &__text {
+    max-width: 558px;
+  }
+  &__imgs {
+    margin-top: 40px;
+    height: 337px;
+    position: relative;
+    @include onTablet {
+      width: 580px;
+      height: 680px;
+    }
+    @include onDesktop {
+      margin: 0;
+    }
+
+    &-1 {
+      width: 80px;
+      height: 124px;
+      border-radius: 10px;
+      @include onTablet {
+        width: 111px;
+        height: 172px;
+      }
+    }
+    &-2 {
+      position: absolute;
+      width: 228px;
+      height: 260px;
+      right: 0;
+      top: 30px;
+      border-radius: 20px;
+
+      @include onTablet {
+        width: 452px;
+        height: 513px;
+        top: 57px;
+        left: 56px;
+      }
+    }
+  }
+  .rectangle {
+    position: absolute;
+    z-index: -1;
+    left: 60px;
+    top: 47px;
+    bottom: 0;
+    width: 259px;
+    height: 290px;
+    border-radius: 32px;
+    background: linear-gradient(139.09deg, #362536 10.76%, #121212 43.45%);
+    @include onTablet {
+      width: 452px;
+      height: 513px;
+      top: 110px;
+
+    }
+  }
+}
+
+.benefits {
+  margin-top: 100px;
 }
 

@@ -1,4 +1,5 @@
 @import '../styles/utils/variables';
+@import '../styles/utils/mixins';
 
 * {
   scroll-behavior: smooth;
@@ -55,4 +56,26 @@ button {
   cursor: pointer;
   outline: inherit;
 }
+
+h2 {
+font-size: 28px;
+font-weight: 700;
+text-align: left;
+  span {
+    color: $accent-color;
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  @include onTablet {
+    font-size: 28px !important;
+  }
+}
+
+
 
