@@ -9,6 +9,8 @@ I have implemented the landing page for Genius company utilizing a combination o
 
 •  [**Functional burger menu**] for mobile and tablet views
 
+You can view the landing page [here](https://growingananas.github.io/genius-landing/).
+
 
 ## Challenges
 The design was extensive, and due to time constraints, since I am working part time, I haven't fully completed the task. The most challenging aspect was to:
