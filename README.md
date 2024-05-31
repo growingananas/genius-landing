@@ -11,7 +11,7 @@ I have implemented the landing page for Genius company utilizing a combination o
 
 
 ## Challenges
-The design was extensive, and due to time constraints, the task was not fully completed. The most challenging aspect was to:
+The design was extensive, and due to time constraints, since I am working part time, I haven't fully completed the task. The most challenging aspect was to:
 
 •  Position images and backgrounds responsively, ensuring they adapt correctly across various device screen designs.
 
