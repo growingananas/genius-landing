@@ -15,6 +15,7 @@ The design was extensive, and due to time constraints, since I am working part t
 
 •  Position images and backgrounds responsively, ensuring they adapt correctly across various device screen designs.
 
+You can view the landing page [here](https://growingananas.github.io/genius-landing/).
 
 ## Notes
 Further work is required to finalize the project and ensure all design elements are responsive and positioned as per the specifications for different devices.
