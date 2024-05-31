@@ -9,82 +9,96 @@
 @import '../styles/blocks/why-ai.scss';
 @import '../styles/blocks/call-to-action.scss';
 @import '../styles/blocks/container.scss';
+@import '../styles/blocks/business.scss';
+@import '../styles/blocks/if-you.scss';
 
-.business {
+
+.who-teaches {
   margin-top: 100px;
+  max-width: 1021;
 
   h2 {
     text-align: center;
   }
-
   p {
+    max-width: 542px;
     font-size: 16px;
-    margin-top: 24px;
+    margin: 24px auto 0;
     text-align: center;
 
+    strong {
+      font-size: 16px;
+      font-weight: 400;
+      color: $accent-color;
+    }
     @include onTablet {
-     margin-top: 24px ;
+      margin-top: 32;
+    }
+    @include onTablet {
+      margin-top: 20;
     }
   }
-
-  .cards {
+  .swiper {
+    margin-top: 40px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    overflow: scroll;
+    scrollbar-width: none;
     gap: 20px;
-    margin-top: 46px;
 
     @include onDesktop {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(604px, 1fr));
-      gap: 20px;
+      justify-content: center;
     }
-  }
-  .card {
-    position: relative;
-    padding: 40px 20px;
-    gap: 16px;
-    border-radius: 20px;
-    background: radial-gradient(68.63% 463.3% at 100% 100%, #504740 0%, #5C4359 16.36%, #382B3F 42.19%, #171717 100%);
 
-    p {
-      text-align: left;
-      font-size: 14px;
-    }
-    & > div {
-      margin-left: 64px;
-
-      @include onDesktop {
-        margin-left: 80px;
-      }
-      &::before {
-        content: url('../assets/icons/business.svg');
-        position: absolute;
-        left: 20px;
-      }
-    }
-  }
-
-  .bubble {
-    height: 203px;
-    max-width: 1000px;
-    margin-top: 40px;
-    background-image: url(../assets/bubble.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto;
-    &__txt {
-      margin: 0;
+    .card {
+      position: relative;
+      
+      img {
+        border-radius: 20px;
+        width: 240px;
+        height: 294px;
+        border-radius: 20px;
+        // margin-block: 1px;
 
       @include onTablet {
-        font-size: 24px;
+        width: 395px;
+        height: 484px;
       }
 
-      strong {
+      @include onDesktop {
+        width: 328px;
+        height: 484px;
+      }
+      }
+    }
+
+    .text {
+       position: absolute;
+       padding: 42px 10px 12px;
+       bottom: 0;
+       background: linear-gradient(180deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.69) 50.29%);
+    }
+
+    .teacher {
+      &__name {
         @include onTablet {
           font-size: 24px;
+        }
+      }
+      &__description {
+        margin-top: 12px;
+        font-size: 12px;
+        color: $accent-color;
+        @include onTablet {
+          font-size: 16px;
+        }
+      }
+      &__owns {
+        margin-top: 8px;
+        font-size: 12px;
+
+        @include onTablet {
+          font-size: 16px;
         }
       }
     }
