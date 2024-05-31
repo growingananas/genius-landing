@@ -16,4 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
   menu.classList.remove('active');
   body.style.overflow = ''; 
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+    menu.classList.remove('active');
+    body.style.overflow = '';
+    }
+  });
 });
