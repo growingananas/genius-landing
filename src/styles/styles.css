@@ -87,6 +87,7 @@ strong {
 
 .menu {
   position: fixed;
+  z-index: 10;
   background-color: #121212;
   width: 100vw;
   height: 100vh;

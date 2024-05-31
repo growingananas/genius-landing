@@ -1,5 +1,6 @@
 .menu {
   position: fixed;
+  z-index: 10;
   background-color: $background-color;
   width: 100vw;
   height: 100vh;
