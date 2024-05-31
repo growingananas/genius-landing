@@ -3,6 +3,9 @@
   position: relative;
   max-width: 580px;
 
+  @include onTablet {
+    margin-top: 120px;
+  }
 
   @include onDesktop {
     display: flex;

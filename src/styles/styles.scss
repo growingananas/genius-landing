@@ -11,96 +11,102 @@
 @import '../styles/blocks/container.scss';
 @import '../styles/blocks/business.scss';
 @import '../styles/blocks/if-you.scss';
+@import '../styles/blocks/who-teaches.scss';
+
+.what-u-learn {
+  position: relative;
+  margin: 100px -20px 0;
+  padding-block: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 36.32%, rgba(38, 35, 40, 0.75) 62.02%), url('../assets/backgrounds/bgsm.png');
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 
 
-.who-teaches {
-  margin-top: 100px;
-  max-width: 1021;
-
-  h2 {
-    text-align: center;
-  }
-  p {
-    max-width: 542px;
-    font-size: 16px;
-    margin: 24px auto 0;
-    text-align: center;
-
-    strong {
-      font-size: 16px;
-      font-weight: 400;
-      color: $accent-color;
-    }
-    @include onTablet {
-      margin-top: 32;
-    }
-    @include onTablet {
-      margin-top: 20;
-    }
-  }
-  .swiper {
-    margin-top: 40px;
-    display: flex;
+  @include onDesktop {
     flex-direction: row;
-    overflow: scroll;
-    scrollbar-width: none;
-    gap: 20px;
+    padding-inline: 106px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 36.32%, rgba(38, 35, 40, 0.75) 62.02%), url('../assets/backgrounds/bg6.png');
+  }
+
+  h2, .subtitle{
+    text-align: center;
+
+    @include   onTablet {
+      max-width: 451px;
+    }
 
     @include onDesktop {
-      justify-content: center;
+      text-align: left;
+    }
+  }
+  .subtitle {
+    margin-top: 24px;
+    font-size: 16px;
+
+    @include   onTablet {
+      margin-top: 32px;
+      font-size: 20px;
+    }
+  }
+
+  .description, strong {
+    font-size: 16px;
+    line-height: 26px;
+    @include   onTablet {
+      font-size: 20px;
     }
 
-    .card {
-      position: relative;
-      
-      img {
-        border-radius: 20px;
-        width: 240px;
-        height: 294px;
-        border-radius: 20px;
-        // margin-block: 1px;
+    @include onDesktop {
+      text-align: left;
+    }
+  }
 
-      @include onTablet {
-        width: 395px;
-        height: 484px;
-      }
+  & > :nth-child(2) {
+    margin: 40px 21px 0;
+    text-align: center;
+    width: 319px;
+
+    .circles {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 20px;
 
       @include onDesktop {
-        width: 328px;
-        height: 484px;
+        justify-content: flex-start;
+        gap: 40px;
       }
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        p {
+          text-transform: uppercase;
+        }
       }
     }
-
-    .text {
-       position: absolute;
-       padding: 42px 10px 12px;
-       bottom: 0;
-       background: linear-gradient(180deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.69) 50.29%);
-    }
-
-    .teacher {
-      &__name {
-        @include onTablet {
-          font-size: 24px;
-        }
-      }
-      &__description {
-        margin-top: 12px;
-        font-size: 12px;
-        color: $accent-color;
-        @include onTablet {
-          font-size: 16px;
-        }
-      }
-      &__owns {
-        margin-top: 8px;
-        font-size: 12px;
-
-        @include onTablet {
-          font-size: 16px;
-        }
-      }
+    .circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 100px;
+      background-color: $accent-color;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 64px;
+      text-align: center;
     }
   }
 }
