@@ -730,3 +730,87 @@ body {
       font-weight: 700;
       line-height: 64px;
       text-align: center; }
+
+.course-container {
+  position: relative;
+  background-color: white !important;
+  height: 1226px;
+  margin-inline: -20px; }
+
+.course-program {
+  position: absolute;
+  margin-block: 100px;
+  top: 0;
+  padding-inline: 20px;
+  width: 100%; }
+  .course-program .swiper {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: 1026px; }
+  .course-program details {
+    border: 1px solid #E6E6E6; }
+  .course-program summary {
+    padding: 32px 16px;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center; }
+  .course-program details li {
+    color: black;
+    margin-left: 20px; }
+    .course-program details li:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      transform: translateY(50%);
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 1px;
+      background-color: #8B57C2; }
+  .course-program details ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; }
+  .course-program .circle {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #8B57C2; }
+  .course-program .answer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px 34px 20px; }
+  .course-program .result {
+    padding: 20px;
+    background-color: #EBEBEB; }
+    .course-program .result h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: black; }
+    .course-program .result p {
+      margin-top: 12px;
+      font-size: 12px;
+      color: black; }
+  .course-program .btn {
+    background-color: #8B57C2;
+    padding: 12px 44px 12px 44px;
+    border-radius: 10px;
+    cursor: pointer; }
+    .course-program .btn:hover {
+      scale: 1.1; }
+
+.active {
+  background-color: #E7DAF5;
+  font-weight: 700; }
