@@ -29,11 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
 //toggles active summary in the section 'course-program'
 document.addEventListener('DOMContentLoaded', function() {
 let summaries = document.querySelectorAll('summary');
-
   function removeActiveClasses() {
     summaries.forEach(function(summary) {
     summary.classList.remove('active');
     });
+  }
+
+  if (summaries.length > 0) {
+    summaries[0].classList.add('active');
   }
   
 
@@ -56,12 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
       details.removeAttribute('open');
     });
   }
-  
+
     detailsElements.forEach(function(details) {
+      if (detailsElements.length > 0) {
+        detailsElements[0].setAttribute('open', '');
+      }
+  
       details.querySelector('summary').addEventListener('click', function(event) {
 
       event.preventDefault();
-  
       if (!details.hasAttribute('open')) {
         closeAllDetails();
         details.setAttribute('open', '');

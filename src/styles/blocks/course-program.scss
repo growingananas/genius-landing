@@ -1,0 +1,204 @@
+.course-container {
+  position: relative;
+  background-color: white !important;
+  height: 1226px;
+  margin-inline: -20px;
+
+
+  @include onTablet { 
+    width: 100vw; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-inline: 0;
+  }
+
+
+  @include onDesktop { 
+    height: 1081px;
+  }
+}
+
+.course-program {
+  position: absolute;
+  margin-block: 100px;
+  top: 0;
+  padding-inline: 20px;
+  width: 100%;
+
+  @include onTablet {
+    margin-block: 120px;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-inline: 82px;
+  }
+
+  @include onDesktop {
+    padding-inline: 106px;
+  }
+
+  .swiper {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: 1026px;
+
+    border-style: solid ;
+    border-color: #E6E6E6;
+    border-width: 1px 6px 1px 1px;
+
+    @include onDesktop {
+      width: 500px;
+      height: 841px;
+    }
+  }
+
+  summary {
+    padding: 32px 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    p {
+      color: black;
+      font-size: 16px;
+
+      @include onTablet {
+        font-size: 18px;
+        max-width: 378px;
+      }
+    }
+  }
+
+  details li {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  
+    &:before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 1px;
+      background-color: $accent-color;
+    }
+  }
+
+  details ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(2, 284px);
+      height: 89px;
+      gap: 20px;
+    }
+  }
+
+  .circle {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 700;
+    background-color: $accent-color;
+  }
+
+  .answer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 20px 34px 20px;
+
+    border-bottom: 1px solid  #E6E6E6;
+
+    @include onTablet {
+      padding: 32px;
+    }
+
+    @include onDesktop {
+      position: absolute;
+      top: 0;
+      right: 82px;
+      height: 775px;
+      width: 708px;
+
+      border: 1px solid #E6E6E6;
+    }
+  }
+
+  .result {
+    padding: 20px;
+    background-color: #EBEBEB;
+
+    @include onTablet {
+      max-width: 516px;
+    }
+
+    @include onDesktop {
+      max-width: 604px;
+    }
+
+    h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: black;
+    }
+
+    p {
+      margin-top: 12px;
+      font-size: 12px;
+      color: black;
+    }
+
+    @include onTablet {
+      p, h4 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  h3 {
+    display: none;
+
+    @include onTablet {
+      display: block;
+      color: black;
+      font-size: 24px !important;
+    }
+  }
+
+  .btn {
+    background-color: $accent-color;
+    padding: 12px 44px 12px 44px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    @include onTablet {
+      max-width: 223px;
+    }
+  }
+}
+
+.active {
+  background-color: #E7DAF5;
+  p {
+    font-weight: 700;
+  }
+}
