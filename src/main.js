@@ -32,11 +32,9 @@ let summaries = document.querySelectorAll('summary');
 
   summaries.forEach(function(summary) {
     summary.addEventListener('click', function() {
-    // If this summary is already active, remove the active class
       if (this.classList.contains('active')) {
       this.classList.remove('active');
       } else {
-      // Otherwise, add the active class
       this.classList.add('active');
       }
     });
