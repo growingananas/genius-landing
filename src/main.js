@@ -30,13 +30,50 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function() {
 let summaries = document.querySelectorAll('summary');
 
+  function removeActiveClasses() {
+    summaries.forEach(function(summary) {
+    summary.classList.remove('active');
+    });
+  }
+  
+
   summaries.forEach(function(summary) {
     summary.addEventListener('click', function() {
-      if (this.classList.contains('active')) {
-      this.classList.remove('active');
-      } else {
-      this.classList.add('active');
-      }
+    // Remove active class from all summaries
+    removeActiveClasses();
+    
+    // Add active class to the clicked summary
+    this.classList.add('active');
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  let detailsElements = document.querySelectorAll('details');
+  
+  // Function to close all <details> elements
+  function closeAllDetails() {
+    detailsElements.forEach(function(details) {
+      details.removeAttribute('open');
+    });
+  }
+  
+  // Add click event listener to each <summary>
+    detailsElements.forEach(function(details) {
+    details.querySelector('summary').addEventListener('click', function(event) {
+    // Prevent the default toggle behavior
+    event.preventDefault();
+    
+    // If the clicked <details> is not already open
+    if (!details.hasAttribute('open')) {
+    // Close all <details>
+    closeAllDetails();
+    // Open the clicked <details>
+    details.setAttribute('open', '');
+    } else {
+    // If it's already open, close it
+    details.removeAttribute('open');
+    }
     });
   });
 });

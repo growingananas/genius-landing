@@ -739,11 +739,12 @@ body {
   @media (min-width: 768px) {
     .course-container {
       width: 100vw;
-      /* Set width to 100% of the viewport width */
       left: 50%;
-      /* Move the element to the center */
       transform: translateX(-50%);
       margin-inline: 0; } }
+  @media (min-width: 1440px) {
+    .course-container {
+      height: 1081px; } }
 
 .course-program {
   position: absolute;
@@ -755,28 +756,36 @@ body {
     .course-program {
       margin-block: 120px;
       width: 100vw;
-      /* Set width to 100% of the viewport width */
       left: 50%;
-      /* Move the element to the center */
       transform: translateX(-50%);
       padding-inline: 82px; } }
+  @media (min-width: 1440px) {
+    .course-program {
+      padding-inline: 106px; } }
   .course-program .swiper {
     display: flex;
     flex-direction: column;
     overflow: scroll;
-    height: 1000px; }
-  .course-program details {
-    border: 1px solid #E6E6E6; }
+    height: 1026px;
+    border-style: solid;
+    border-color: #E6E6E6;
+    border-width: 1px 6px 1px 1px; }
+    @media (min-width: 1440px) {
+      .course-program .swiper {
+        width: 500px;
+        height: 841px; } }
   .course-program summary {
     padding: 32px 16px;
-    color: black;
-    font-size: 16px;
     display: flex;
     gap: 16px;
     align-items: center; }
-    @media (min-width: 768px) {
-      .course-program summary {
-        font-size: 18px; } }
+    .course-program summary p {
+      color: black;
+      font-size: 16px; }
+      @media (min-width: 768px) {
+        .course-program summary p {
+          font-size: 18px;
+          max-width: 378px; } }
   .course-program details li {
     color: black;
     display: flex;
@@ -817,16 +826,28 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px 20px 34px 20px; }
+    padding: 20px 20px 34px 20px;
+    border-bottom: 1px solid  #E6E6E6; }
     @media (min-width: 768px) {
       .course-program .answer {
         padding: 32px; } }
+    @media (min-width: 1440px) {
+      .course-program .answer {
+        position: absolute;
+        top: 0;
+        right: 82px;
+        height: 775px;
+        width: 708px;
+        border: 1px solid #E6E6E6; } }
   .course-program .result {
     padding: 20px;
     background-color: #EBEBEB; }
     @media (min-width: 768px) {
       .course-program .result {
         max-width: 516px; } }
+    @media (min-width: 1440px) {
+      .course-program .result {
+        max-width: 604px; } }
     .course-program .result h4 {
       font-size: 12px;
       font-weight: 700;
@@ -857,5 +878,6 @@ body {
         max-width: 223px; } }
 
 .active {
-  background-color: #E7DAF5;
-  font-weight: 700; }
+  background-color: #E7DAF5; }
+  .active p {
+    font-weight: 700; }

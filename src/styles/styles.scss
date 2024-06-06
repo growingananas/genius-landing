@@ -22,10 +22,15 @@
 
 
   @include onTablet { 
-    width: 100vw; /* Set width to 100% of the viewport width */
-    left: 50%; /* Move the element to the center */
+    width: 100vw; 
+    left: 50%;
     transform: translateX(-50%);
     margin-inline: 0;
+  }
+
+
+  @include onDesktop { 
+    height: 1081px;
   }
 }
 .course-program {
@@ -37,34 +42,45 @@
 
   @include onTablet {
     margin-block: 120px;
-
-    width: 100vw; /* Set width to 100% of the viewport width */
-    left: 50%; /* Move the element to the center */
+    width: 100vw;
+    left: 50%;
     transform: translateX(-50%);
     padding-inline: 82px;
+  }
+
+  @include onDesktop {
+    padding-inline: 106px;
   }
 
   .swiper {
     display: flex;
     flex-direction: column;
     overflow: scroll;
-    height: 1000px;
-  }
-  details {
-    border: 1px solid #E6E6E6;
+    height: 1026px;
+
+    border-style: solid ;
+    border-color: #E6E6E6;
+    border-width: 1px 6px 1px 1px;
+
+    @include onDesktop {
+      width: 500px;
+      height: 841px;
+    }
   }
 
   summary {
     padding: 32px 16px;
-    color: black;
- 
-    font-size: 16px;
     display: flex;
     gap: 16px;
     align-items: center;
+    p {
+      color: black;
+      font-size: 16px;
 
-    @include onTablet {
-      font-size: 18px;
+      @include onTablet {
+        font-size: 18px;
+        max-width: 378px;
+      }
     }
   }
 
@@ -121,8 +137,20 @@
     gap: 20px;
     padding: 20px 20px 34px 20px;
 
+    border-bottom: 1px solid  #E6E6E6;
+
     @include onTablet {
       padding: 32px;
+    }
+
+    @include onDesktop {
+      position: absolute;
+      top: 0;
+      right: 82px;
+      height: 775px;
+      width: 708px;
+
+      border: 1px solid #E6E6E6;
     }
   }
 
@@ -132,6 +160,10 @@
 
     @include onTablet {
       max-width: 516px;
+    }
+
+    @include onDesktop {
+      max-width: 604px;
     }
 
     h4 {
@@ -151,8 +183,6 @@
         font-size: 14px;
       }
     }
-
-   
   }
 
   h3 {
@@ -183,5 +213,9 @@
 
 .active {
   background-color: #E7DAF5;
-  font-weight: 700;
+  p {
+    font-weight: 700;
+  }
+
 }
+
