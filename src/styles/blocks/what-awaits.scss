@@ -1,0 +1,73 @@
+.what-awaits {
+  margin-top: 100px;
+
+  @include onTablet {
+    margin-top: 120px;
+  }
+
+  h2 {
+    text-align:  center;
+    margin: 0 auto;
+    width: 197px;
+
+    @include onTablet {
+      width: 391px;
+    }
+
+    @include onDesktop {
+      width: auto;
+    }
+  }
+  .cards {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(2, 604px);
+      gap: 20px;
+    }
+  }
+
+  .card {
+    height: max-content;
+    padding: 40px 20px;
+    border-radius: 20px;
+    background: radial-gradient(100% 586.65% at 0% 100%, #504740 0%, #5C4359 16.36%, #382B3F 42.19%, #171717 100%);
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    @include onTablet {
+      gap: 36px;
+    }
+
+    &__txt {
+      // width: 192px;
+      h4 {
+        color: $accent-color;
+        max-width: 151px;
+
+        @include onTablet {
+          font-size: 20px;
+          max-width: none;
+        }
+      }
+
+      p {
+        margin-top: 12px;
+        font-size: 12px;
+        line-height: 15.06px;
+
+        @include onTablet {
+          font-size: 14px;
+          line-height: 17.57px;
+          
+        }
+      }
+    }
+  }
+}

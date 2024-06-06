@@ -881,3 +881,55 @@ body {
   background-color: #E7DAF5; }
   .active p {
     font-weight: 700; }
+
+.what-awaits {
+  margin-top: 100px; }
+  @media (min-width: 768px) {
+    .what-awaits {
+      margin-top: 120px; } }
+  .what-awaits h2 {
+    text-align: center;
+    margin: 0 auto;
+    width: 197px; }
+    @media (min-width: 768px) {
+      .what-awaits h2 {
+        width: 391px; } }
+    @media (min-width: 1440px) {
+      .what-awaits h2 {
+        width: auto; } }
+  .what-awaits .cards {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; }
+    @media (min-width: 1440px) {
+      .what-awaits .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 604px);
+        gap: 20px; } }
+  .what-awaits .card {
+    height: max-content;
+    padding: 40px 20px;
+    border-radius: 20px;
+    background: radial-gradient(100% 586.65% at 0% 100%, #504740 0%, #5C4359 16.36%, #382B3F 42.19%, #171717 100%);
+    display: flex;
+    flex-direction: row;
+    gap: 16px; }
+    @media (min-width: 768px) {
+      .what-awaits .card {
+        gap: 36px; } }
+    .what-awaits .card__txt h4 {
+      color: #8B57C2;
+      max-width: 151px; }
+      @media (min-width: 768px) {
+        .what-awaits .card__txt h4 {
+          font-size: 20px;
+          max-width: none; } }
+    .what-awaits .card__txt p {
+      margin-top: 12px;
+      font-size: 12px;
+      line-height: 15.06px; }
+      @media (min-width: 768px) {
+        .what-awaits .card__txt p {
+          font-size: 14px;
+          line-height: 17.57px; } }
