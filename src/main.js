@@ -51,29 +51,23 @@ let summaries = document.querySelectorAll('summary');
 document.addEventListener('DOMContentLoaded', function() {
   let detailsElements = document.querySelectorAll('details');
   
-  // Function to close all <details> elements
   function closeAllDetails() {
     detailsElements.forEach(function(details) {
       details.removeAttribute('open');
     });
   }
   
-  // Add click event listener to each <summary>
     detailsElements.forEach(function(details) {
-    details.querySelector('summary').addEventListener('click', function(event) {
-    // Prevent the default toggle behavior
-    event.preventDefault();
-    
-    // If the clicked <details> is not already open
-    if (!details.hasAttribute('open')) {
-    // Close all <details>
-    closeAllDetails();
-    // Open the clicked <details>
-    details.setAttribute('open', '');
-    } else {
-    // If it's already open, close it
-    details.removeAttribute('open');
-    }
+      details.querySelector('summary').addEventListener('click', function(event) {
+
+      event.preventDefault();
+  
+      if (!details.hasAttribute('open')) {
+        closeAllDetails();
+        details.setAttribute('open', '');
+      } else {
+        details.removeAttribute('open');
+      }
     });
   });
 });
