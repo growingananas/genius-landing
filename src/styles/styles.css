@@ -1015,3 +1015,14 @@ body {
         background-image: url(../assets/result/percentage3.svg);
         background-repeat: no-repeat;
         background-size: cover; } }
+
+.learning-process {
+  padding: 60px 18px;
+  margin-top: 100px;
+  background-color: #212121;
+  border-radius: 20px; }
+  @media (min-width: 768px) {
+    .learning-process {
+      margin-top: 120px; } }
+  .learning-process h2 {
+    text-align: center; }
