@@ -39,19 +39,20 @@
     overflow: hidden;
     gap: 40px;
     margin-top: 40px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 22.15px;
-      top: 10px;
-      width: 1px;
-      height: 410px;
-      background-color: $accent-color;
-    }
     .row {
       position: relative;
       display: flex;
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        transform: translateX(-50%);
+        top: 40px;
+        left: 22.15px;
+        width: 1px;
+        height: 104%;
+        background-color: $accent-color;
+      }
     }
     .number {
       position: absolute;

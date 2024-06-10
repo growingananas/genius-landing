@@ -1037,17 +1037,18 @@ body {
     overflow: hidden;
     gap: 40px;
     margin-top: 40px; }
-    .learning-process .progression-line::before {
-      content: '';
-      position: absolute;
-      left: 22.15px;
-      top: 10px;
-      width: 1px;
-      height: 410px;
-      background-color: #8B57C2; }
     .learning-process .progression-line .row {
       position: relative;
       display: flex; }
+      .learning-process .progression-line .row:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        transform: translateX(-50%);
+        top: 40px;
+        left: 22.15px;
+        width: 1px;
+        height: 104%;
+        background-color: #8B57C2; }
     .learning-process .progression-line .number {
       position: absolute;
       left: 34px;
