@@ -1027,7 +1027,11 @@ body {
   border-radius: 20px; }
   @media (min-width: 768px) {
     .learning-process {
-      margin-top: 120px; } }
+      margin-top: 120px;
+      padding: 80px 39.5px; } }
+  @media (min-width: 1440px) {
+    .learning-process {
+      padding: 80px 104px; } }
   .learning-process h2 {
     text-align: center; }
   .learning-process .progression-line {
@@ -1037,6 +1041,10 @@ body {
     overflow: hidden;
     gap: 40px;
     margin-top: 40px; }
+    @media (min-width: 1440px) {
+      .learning-process .progression-line {
+        flex-direction: row;
+        margin-top: 20px; } }
     .learning-process .progression-line .row {
       position: relative;
       display: flex; }
@@ -1049,6 +1057,16 @@ body {
         width: 1px;
         height: 104%;
         background-color: #8B57C2; }
+        @media (min-width: 768px) {
+          .learning-process .progression-line .row:not(:last-child)::after {
+            display: none; } }
+      @media (min-width: 1440px) {
+        .learning-process .progression-line .row {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 20px;
+          width: 240px; } }
     .learning-process .progression-line .number {
       position: absolute;
       left: 34px;
@@ -1063,13 +1081,37 @@ body {
       color: white;
       font-size: 6px;
       font-weight: 700; }
+      @media (min-width: 768px) {
+        .learning-process .progression-line .number {
+          width: 36px;
+          height: 36px;
+          font-size: 20px;
+          left: 100px; } }
+      @media (min-width: 1440px) {
+        .learning-process .progression-line .number {
+          left: 140px; } }
     .learning-process .progression-line .label {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      margin-left: 12px;
+      margin-left: 15.69px;
       font-size: 12px;
       color: #E1E1E1; }
+      @media (min-width: 768px) {
+        .learning-process .progression-line .label {
+          font-size: 18px;
+          margin-left: 30px; } }
+      @media (min-width: 1440px) {
+        .learning-process .progression-line .label {
+          margin-left: 0;
+          gap: 20px; } }
+      @media (min-width: 768px) {
+        .learning-process .progression-line .label h4 {
+          font-size: 20px; } }
     .learning-process .progression-line img {
       width: 44.31px;
       height: 44.31px; }
+      @media (min-width: 768px) {
+        .learning-process .progression-line img {
+          width: 120px;
+          height: 120px; } }

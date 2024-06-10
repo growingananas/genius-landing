@@ -26,6 +26,11 @@
 
   @include onTablet {
     margin-top: 120px;
+    padding: 80px 39.5px;
+  }
+
+  @include onDesktop {
+    padding: 80px 104px;
   }
 
   h2 {
@@ -39,6 +44,11 @@
     overflow: hidden;
     gap: 40px;
     margin-top: 40px;
+
+    @include onDesktop {
+      flex-direction: row;
+      margin-top: 20px;
+    }
     .row {
       position: relative;
       display: flex;
@@ -52,6 +62,22 @@
         width: 1px;
         height: 104%;
         background-color: $accent-color;
+
+        @include onTablet {
+          display: none;
+        }
+
+        // @include onDesktop {
+        //   display: block;
+        // }
+      }
+
+      @include onDesktop {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        width: 240px;
       }
     }
     .number {
@@ -70,19 +96,50 @@
       color: white;
       font-size: 6px;
       font-weight: 700;
+
+      @include onTablet {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+        left: 100px;
+      }
+
+      @include onDesktop {
+        left: 140px;
+      }
     }
     .label {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      margin-left: 12px;
+      margin-left: 15.69px;
       font-size: 12px;
       color: #E1E1E1;
 
+      @include onTablet {
+        font-size: 18px;
+        margin-left: 30px;
+      }
+
+      @include onDesktop {
+        margin-left: 0;
+        gap: 20px;
+      }
+
+      h4 {
+        @include onTablet {
+          font-size: 20px;
+        }
+      }
     }
     img {
       width: 44.31px;
       height: 44.31px;
+
+      @include onTablet {
+        width: 120px;
+        height: 120px;
+      }
     }
   }
 }
