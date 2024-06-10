@@ -31,4 +31,57 @@
   h2 {
     text-align: center;
   }
+
+  .progression-line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 40px;
+    margin-top: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 22.15px;
+      top: 10px;
+      width: 1px;
+      height: 410px;
+      background-color: $accent-color;
+    }
+    .row {
+      position: relative;
+      display: flex;
+    }
+    .number {
+      position: absolute;
+      left: 34px;
+      transform: translateY(200%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 13.29px;
+      height: 13.29px;
+      border-radius: 100px;
+
+      background-color:#494949;
+      color: white;
+      font-size: 6px;
+      font-weight: 700;
+    }
+    .label {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-left: 12px;
+      font-size: 12px;
+      color: #E1E1E1;
+
+    }
+    img {
+      width: 44.31px;
+      height: 44.31px;
+    }
+  }
 }

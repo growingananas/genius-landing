@@ -139,7 +139,7 @@
     }
   }
 
-  .result {
+  .in-result {
     padding: 20px;
     background-color: #EBEBEB;
 
@@ -148,7 +148,8 @@
     }
 
     @include onDesktop {
-      max-width: 604px;
+      padding-inline: 63px;
+      line-height: 17.57px;
     }
 
     h4 {
@@ -161,6 +162,10 @@
       margin-top: 12px;
       font-size: 12px;
       color: black;
+
+      @include onDesktop {
+        max-width: 478px;
+      }
     }
 
     @include onTablet {
