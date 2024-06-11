@@ -1,8 +1,8 @@
 .what-awaits {
-  margin-top: 100px;
+  margin-top: $margin-top-mob;
 
   @include onTablet {
-    margin-top: 120px;
+    margin-top: $margin-top-tab;
   }
 
   h2 {

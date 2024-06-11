@@ -16,7 +16,7 @@
   box-shadow: 0px 4px 4px 0px #00000040;
 
   @include onTablet {
-    margin-top: 120px;
+    margin-top: $margin-top-tab;
   }
 
   @include onDesktop {

@@ -20,13 +20,13 @@
 
 .course-program {
   position: absolute;
-  margin-block: 100px;
+  margin-block: $margin-top-mob;
   top: 0;
   padding-inline: 20px;
   width: 100%;
 
   @include onTablet {
-    margin-block: 120px;
+    margin-block: $margin-top-tab;
     width: 100vw;
     left: 50%;
     transform: translateX(-50%);
