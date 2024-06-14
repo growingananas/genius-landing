@@ -26,6 +26,7 @@
   width: 100%;
 
   @include onTablet {
+    max-width: 1440px;
     margin-block: $margin-top-tab;
     width: 100vw;
     left: 50%;
@@ -97,6 +98,7 @@
       grid-template-columns: repeat(2, 284px);
       height: 89px;
       gap: 20px;
+      overflow-x: hidden;
     }
   }
 
@@ -125,7 +127,7 @@
     border-bottom: 1px solid  #E6E6E6;
 
     @include onTablet {
-      padding: 32px;
+      padding: 32px 0 32px 32px;
     }
 
     @include onDesktop {

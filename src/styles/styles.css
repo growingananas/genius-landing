@@ -754,6 +754,7 @@ body {
   width: 100%; }
   @media (min-width: 768px) {
     .course-program {
+      max-width: 1440px;
       margin-block: 120px;
       width: 100vw;
       left: 50%;
@@ -809,7 +810,8 @@ body {
         display: grid;
         grid-template-columns: repeat(2, 284px);
         height: 89px;
-        gap: 20px; } }
+        gap: 20px;
+        overflow-x: hidden; } }
   .course-program .circle {
     width: 24px;
     height: 24px;
@@ -830,7 +832,7 @@ body {
     border-bottom: 1px solid  #E6E6E6; }
     @media (min-width: 768px) {
       .course-program .answer {
-        padding: 32px; } }
+        padding: 32px 0 32px 32px; } }
     @media (min-width: 1440px) {
       .course-program .answer {
         position: absolute;
@@ -1129,6 +1131,7 @@ body {
 
 .ai-usage {
   margin-top: 100px;
+  height: max-content;
   position: relative; }
   .ai-usage::after {
     content: '';
@@ -1142,6 +1145,14 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: -1; }
+    @media (min-width: 1440px) {
+      .ai-usage::after {
+        rotate: -90deg;
+        bottom: 30px;
+        transform-origin: center;
+        left: 45%;
+        width: 130px;
+        height: 180px; } }
   @media (min-width: 768px) {
     .ai-usage {
       margin-top: 120px; } }
@@ -1160,6 +1171,18 @@ body {
       margin: 76px auto 60px;
       max-width: 271px;
       line-height: 17.57px; }
+      @media (min-width: 768px) {
+        .ai-usage .description--2 {
+          margin: 116px auto 35px;
+          font-size: 20px;
+          max-width: 556px;
+          line-height: 25.1px; }
+          .ai-usage .description--2 strong {
+            font-size: 20px; } }
+      @media (min-width: 1440px) {
+        .ai-usage .description--2 {
+          margin: 95px auto 15px;
+          max-width: 895px; } }
   .ai-usage .cards {
     display: flex;
     flex-direction: column;
@@ -1198,3 +1221,54 @@ body {
           font-size: 20px; } }
     .ai-usage .card img {
       width: 48px; }
+
+.job-seeking {
+  margin-top: 100px; }
+  @media (min-width: 768px) {
+    .job-seeking {
+      margin-top: 120px;
+      padding: 80px 29px;
+      background-color: #212121;
+      border-radius: 32px; } }
+  @media (min-width: 1440px) {
+    .job-seeking {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 78px;
+      padding: 80px 104px; }
+      .job-seeking > div:first-child {
+        width: 546px; } }
+  .job-seeking h2 {
+    text-align: center; }
+    @media (min-width: 1440px) {
+      .job-seeking h2 {
+        text-align: left; } }
+  .job-seeking ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px; }
+    @media (min-width: 768px) {
+      .job-seeking ul {
+        margin-top: 40px;
+        gap: 28px; } }
+  .job-seeking li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px; }
+    @media (min-width: 768px) {
+      .job-seeking li p, .job-seeking li strong {
+        font-size: 16px; } }
+  .job-seeking .img-container {
+    margin: 40px auto 0;
+    width: 256px;
+    height: 204px;
+    background-image: url(../assets/icons/job-seeking/employment.png);
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media (min-width: 768px) {
+      .job-seeking .img-container {
+        width: 396px;
+        height: 314px; } }
