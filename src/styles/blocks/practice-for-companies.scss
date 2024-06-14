@@ -1,0 +1,48 @@
+.practice-for-companies {
+  margin-top: $margin-top-mob;
+
+  @include onTablet {
+    margin-top: $margin-top-tab;
+  }
+
+  h2, p {
+    text-align: center;
+  }
+
+  h2 {
+    @include onDesktop {
+      max-width: 546px;
+      margin: 0 auto;
+    }
+  }
+  p {
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 26px;
+  } 
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 145px);
+    justify-content: center;
+    gap: 20px;
+
+    margin-top: 32px;
+
+    @include onTablet {
+      grid-template-columns: repeat(3, 188px);
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(6, 188px);
+    }
+
+    img {
+      width: 145px;
+
+      @include onTablet {
+        width: 188px;
+      }
+    }
+  }
+}

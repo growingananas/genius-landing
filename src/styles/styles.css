@@ -1272,3 +1272,36 @@ body {
       .job-seeking .img-container {
         width: 396px;
         height: 314px; } }
+
+.practice-for-companies {
+  margin-top: 100px; }
+  @media (min-width: 768px) {
+    .practice-for-companies {
+      margin-top: 120px; } }
+  .practice-for-companies h2, .practice-for-companies p {
+    text-align: center; }
+  @media (min-width: 1440px) {
+    .practice-for-companies h2 {
+      max-width: 546px;
+      margin: 0 auto; } }
+  .practice-for-companies p {
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 26px; }
+  .practice-for-companies ul {
+    display: grid;
+    grid-template-columns: repeat(2, 145px);
+    justify-content: center;
+    gap: 20px;
+    margin-top: 32px; }
+    @media (min-width: 768px) {
+      .practice-for-companies ul {
+        grid-template-columns: repeat(3, 188px); } }
+    @media (min-width: 1440px) {
+      .practice-for-companies ul {
+        grid-template-columns: repeat(6, 188px); } }
+    .practice-for-companies ul img {
+      width: 145px; }
+      @media (min-width: 768px) {
+        .practice-for-companies ul img {
+          width: 188px; } }
