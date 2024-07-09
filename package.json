@@ -4,7 +4,7 @@
   "description": "A basic project setup with JavaScript, HTML, and SCSS",
   "main": "main.js",
   "scripts": {
-    "build-css": "node-sass src/styles/styles.scss src/styles/styles.css",
+    "build-css": "sass src/styles/styles.scss src/styles/styles.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
@@ -14,8 +14,8 @@
   "author": "Katie",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sass": "^1.77.6"
   },
   "bugs": {
     "url": "https://github.com/growingananas/genius-landing/issues"
