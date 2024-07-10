@@ -1,0 +1,110 @@
+.installments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  margin-top: $margin-top-mob;
+  padding: 80px 20px;
+
+  background-color: $grey-background;
+  border-radius: 32px;
+
+  @include onTablet {
+    margin-top: $margin-top-tab;
+    padding-inline: 94px;
+  }
+
+  @include onDesktop {
+    flex-direction: row;
+  }
+
+  .el {
+    &__top {
+      max-width: 416px;
+
+      p, h2 {
+        text-align: center;
+        @include onDesktop {
+          text-align: left;
+        }
+      }
+  
+      p {
+        margin-top: 32px;
+
+        @include onTablet {
+          line-height: auto;
+          font-size: 20px;
+        }
+        strong {
+          color: $accent-color;
+          @include onTablet {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    &__central {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 313px;
+      height: 324px;
+
+      background-image: url(../assets/backgrounds/colorful-node.png);
+      background-size: 120% 108%; 
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .gradient-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        width: 162px;
+        height: 254px;
+
+        border-radius: 20px;
+        background: #121212B2;
+        h3 {
+          font-weight: 400;
+          text-align: center;
+          line-height: 26px;
+        }
+        strong {
+          color: $accent-color;
+          font-size: 64px;
+        }
+      }
+    }
+
+    &__bottom {
+      h3 {
+        @include onTablet {
+          font-size: 20px !important;
+        }
+      }
+      li {
+        padding-left: 10px;
+        font-size: 12px;
+        }
+      ul {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        li::before {
+          content: '•';
+          color: white;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+  }
+}
