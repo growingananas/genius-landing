@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Project</title>
+  <title>Genius landing</title>
   <link rel="stylesheet" href="src/styles/styles.css">
   <script src="src/main.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="logo.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
   <body>
     <div class="page">
@@ -863,31 +865,107 @@
         </section>
 
         <section class="book-place">
-          <div class="book-place__top">
-            <ul>
-              <li>
-                <img src="./src/assets/icons/book-place/data.svg" alt="Data">
-                <strong>30 квітня</strong>
-              </li>
+          <div>
+            <div class="book-place__top">
+              <ul>
+                <li>
+                  <img src="./src/assets/icons/book-place/data.svg" alt="Data">
+                  <strong>30 квітня</strong>
+                </li>
+    
+                <li>
+                  <img src="./src/assets/icons/book-place/online.svg" alt="Online">
+                  <strong>online</strong>
+                </li>
+    
+                <li>
+                  <img src="./src/assets/icons/book-place/potik.svg" alt="Potik">
+                  <strong>3-й потік</strong>
+                </li>
+    
+                <li>
+                  <img src="./src/assets/icons/book-place/time.svg" alt="Time">
+                  <strong>3 місяці</strong>
+                </li>
+              </ul>
+            </div>
+            <div class="book-place__center">
+              <h1>AI <strong>спеціаліст</strong></h1>
+              <h3>з 0 до повного опанування професії та результату $</h3>
   
-              <li>
-                <img src="./src/assets/icons/book-place/online.svg" alt="Online">
-                <strong>online</strong>
-              </li>
+              <h4>
+                Щоб першим забронювати участь та <strong> підключитися до лімітованої групи на кращих умовах</strong>, заповніть форму
+              </h4>
   
-              <li>
-                <img src="./src/assets/icons/book-place/potik.svg" alt="Potik">
-                <strong>3-й потік</strong>
-              </li>
-  
-              <li>
-                <img src="./src/assets/icons/book-place/time.svg" alt="Time">
-                <strong>3 місяці</strong>
-              </li>
-            </ul>
+              <p class="days__title">До підвищення цін залишилося:</p>
+              <ul class="days">
+                <li>
+                  <strong>03</strong>
+                  <p>Дні</p>
+                </li>
+                <li>
+                  <strong>06</strong>
+                  <p>Годин</p>
+                </li>
+                <li>
+                  <strong>03</strong>
+                  <p>Хвилин</p>
+                </li>
+                <li>
+                  <strong>15</strong>
+                  <p>Секунд</p>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="book-place__center">
-            <h1>AI <strong>спеціаліст</strong></h1>
+
+          <div class="booking-form">
+            <img class="discount-shape" src="./src/assets/icons/form/discount-shape.svg" alt="">
+            <div class="discount-text">
+              <p>Знижки до</p>
+              <strong>-50 %</strong>
+              <p>на навчання</p>
+            </div>
+
+            <h3>Забронювати місце на курсі</h3>
+            <p class="description">Заповніть форму та переходьте до вибору зручного пакета участі</p>
+
+            <form action="/action_page.php" id="bookingForm">
+              <label for="name"></label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name"
+                placeholder="Ваше ім’я та прізвище"
+                required
+              >
+
+              <label for="email"></label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email"
+                placeholder="Ваш email"
+                required
+              >
+
+              <label for="phone"></label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                pattern="[0-9]*" 
+                title="Please enter a valid phone number"
+                required
+              >
+
+              <input type="submit" value="Записатися на курс" class="call-to-action-btn-filled">
+            </form>
+
+            <p style="color: #646464;">Залишилось 5 місць із 25</p>
+            <p class="policy-link">Натискаючи на кнопку, я погоджуюсь <br>
+              <a href="https://ua-policies.genius.space/policies" target="_blank">на обробку персональних даних</a>
+            </p>
           </div>
         </section>
       </main>

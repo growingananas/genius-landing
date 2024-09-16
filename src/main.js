@@ -77,3 +77,58 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+//added country code dropdown for the contact form
+
+
+document.addEventListener("DOMContentLoaded", function() {
+const phoneInputField = document.querySelector("#phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+initialCountry: "ua",
+geoIpLookup: function(callback) {
+fetch('https://ipinfo.io/json', { headers: { 'Accept': 'application/json' }})
+.then(response => response.json())
+.then(data => callback(data.country))
+.catch(() => callback('us'));
+},
+utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+});
+
+  //added validation for the contact form
+
+const form = document.getElementById('bookingForm');
+const inputs = form.querySelectorAll('required');
+
+inputs.forEach(input => {
+  input.addEventListener('input', () => {
+    if (input.checkValidity()) {
+      input.classList.remove('error');
+    } else {
+      input.classList.add('error');
+    }
+  });
+});
+
+// Prevent non-numeric input for phone number
+phoneInputField.addEventListener('input', (e) => {
+  e.target.value = e.target.value.replace(/[^\d]/g, '');
+});
+
+form.addEventListener('submit', (e) => {
+let valid = true;
+inputs.forEach(input => {
+  if (!input.checkValidity()) {
+    input.classList.add('error');
+    valid = false;
+  }
+});
+  if (!valid) {
+    e.preventDefault();
+    alert('Please fill out all fields correctly.');
+  }
+});
+
+});
+
+
+

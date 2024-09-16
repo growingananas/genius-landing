@@ -47,7 +47,7 @@ a {
   color: inherit;
 }
 
-button {
+button, input {
   background: none;
   color: inherit;
   border: none;
@@ -98,4 +98,16 @@ h4 {
 
 strong {
   font-weight: 700;
+}
+
+.call-to-action-btn-filled {
+  width: 227px;
+  height: 42px;
+  padding: 12px 44px 12px 44px;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: $accent-color;
+  &:hover {
+    scale: 1.1;
+  }
 }
