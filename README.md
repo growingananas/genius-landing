@@ -19,5 +19,5 @@ The design was extensive, and due to time constraints, since I am working part t
 
 
 ## Notes
-Further work is required to finalize the project and ensure all design elements are responsive and positioned as per the specifications for different devices.
+Further work is required to finalize the project and ensure all design elements are responsive and positioned according to the specifications for different devices.
 
