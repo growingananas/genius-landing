@@ -1196,11 +1196,10 @@ body {
     max-width: 223px;
   }
 }
-
-.active {
+.course-program .active {
   background-color: #E7DAF5;
 }
-.active p {
+.course-program .active p {
   font-weight: 700;
 }
 
@@ -2191,6 +2190,72 @@ body {
 
 .iti__country-name {
   color: black;
+}
+
+.popular-questions {
+  margin: 100px 20px 0;
+  padding: 80px 12px;
+  background-color: #212121;
+  border-radius: 32px;
+}
+.popular-questions .container {
+  padding-inline: unset;
+}
+@media (min-width: 1440px) {
+  .popular-questions .container {
+    max-width: 604px;
+  }
+}
+.popular-questions h2 {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .popular-questions {
+    border-radius: unset;
+    margin-inline: unset;
+    margin-top: 120px;
+  }
+}
+.popular-questions .faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+.popular-questions details {
+  background-color: #353535;
+  border-radius: 10px;
+  padding: 16px;
+}
+.popular-questions details[open] .plus {
+  transform: rotate(45deg);
+}
+.popular-questions details summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .popular-questions details summary h4 {
+    font-size: 20px;
+  }
+}
+.popular-questions details div {
+  margin-top: 20px;
+}
+.popular-questions details summary {
+  list-style: none;
+}
+.popular-questions details summary::-webkit-details-marker {
+  display: none;
+}
+.popular-questions .plus {
+  font-size: 52px;
+  color: #8B57C2;
+  font-weight: 700;
+  transition: transform 0.3s ease;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -22,4 +22,76 @@
 @import '../styles/blocks/installments.scss';
 @import '../styles/blocks/book-place.scss';
 
+.popular-questions {
+  margin: $margin-top-mob 20px 0;
+  padding: 80px 12px;
+  background-color: $grey-background;
+  border-radius: 32px;
 
+  .container {
+    padding-inline: unset;
+
+    @include onDesktop {
+      max-width: 604px;
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+  @include onTablet {
+    border-radius: unset;
+    margin-inline: unset;
+    margin-top: $margin-top-tab;
+  }
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  details {
+    background-color: #353535;
+    border-radius: 10px;
+    padding: 16px;
+
+     &[open] .plus {
+      transform: rotate(45deg);   
+    }
+
+    summary {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      line-height: 1.6;
+
+      @include onTablet {
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+
+
+    div {
+      margin-top: 20px;
+    }
+  }
+
+  details summary {
+    list-style: none;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;    
+  }
+
+  .plus {
+    font-size: 52px;
+    color: $accent-color;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+  }
+}
