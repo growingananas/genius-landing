@@ -3,13 +3,13 @@ body {
   background-repeat: no-repeat;
   background-position: top 60% right;
 }
-.page {
+.container {
   margin: 0 auto;
-  padding: 20px;
-  min-width: 320px;
+  // min-width: 320px;
+  padding-inline: 20px;
 
   @include onTablet  {
-    padding-inline: 0;
+    padding-inline: unset;
     width: 604px;
   }
   @include onDesktop  {

@@ -170,8 +170,8 @@ strong {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 42px;
-  padding: 3px 0px 3px 0px;
+  padding-block: 20px;
+  height: 60px;
 }
 .header__top .page__menu {
   display: none;
@@ -212,12 +212,12 @@ strong {
 }
 .header__center {
   padding-inline: 2px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   .header__center {
     padding-inline: 1px;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 }
 .header__center ul {
@@ -591,19 +591,18 @@ body {
   background-position: top 60% right;
 }
 
-.page {
+.container {
   margin: 0 auto;
-  padding: 20px;
-  min-width: 320px;
+  padding-inline: 20px;
 }
 @media (min-width: 768px) {
-  .page {
-    padding-inline: 0;
+  .container {
+    padding-inline: unset;
     width: 604px;
   }
 }
 @media (min-width: 1440px) {
-  .page {
+  .container {
     width: 1230px;
   }
 }
@@ -785,6 +784,21 @@ body {
   margin: 100px auto 0;
   max-width: 1021px;
 }
+.who-teaches .text-block {
+  padding-inline: 20px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .who-teaches .text-block {
+    padding-inline: 0;
+    width: 604px;
+  }
+}
+@media (min-width: 1440px) {
+  .who-teaches .text-block {
+    width: 100%;
+  }
+}
 @media (min-width: 768px) {
   .who-teaches {
     margin-top: 120px;
@@ -805,17 +819,19 @@ body {
   color: #8B57C2;
 }
 @media (min-width: 768px) {
-  .who-teaches p {
-    margin-top: 32px;
+  .who-teaches p strong {
+    font-size: 20px;
   }
 }
 @media (min-width: 768px) {
   .who-teaches p {
-    margin-top: 20px;
+    margin-top: 32px;
+    font-size: 20px;
   }
 }
 .who-teaches .swiper {
   margin-top: 40px;
+  padding-inline: 20px;
   display: flex;
   flex-direction: row;
   overflow: scroll;
@@ -825,6 +841,7 @@ body {
 @media (min-width: 1440px) {
   .who-teaches .swiper {
     justify-content: center;
+    padding-inline: unset;
   }
 }
 .who-teaches .swiper .card {
@@ -881,23 +898,66 @@ body {
 }
 
 .what-u-learn {
-  position: relative;
-  margin: 100px -20px 0;
-  padding-block: 100px;
+  margin-top: 100px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 36.32%, rgba(38, 35, 40, 0.75) 62.02%), url("../assets/backgrounds/bgsm.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.what-u-learn .container {
+  padding: 100px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 36.32%, rgba(38, 35, 40, 0.75) 62.02%), url("../assets/backgrounds/bgsm.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  overflow: hidden;
+}
+@media (min-width: 1440px) {
+  .what-u-learn .container {
+    flex-direction: row;
+    padding-block: 80px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.what-u-learn .container > :nth-child(2) {
+  margin: 40px 21px 0;
+  text-align: center;
+  width: 319px;
+}
+.what-u-learn .container > :nth-child(2) .circles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+@media (min-width: 1440px) {
+  .what-u-learn .container > :nth-child(2) .circles {
+    justify-content: flex-start;
+    gap: 40px;
+  }
+}
+.what-u-learn .container > :nth-child(2) .circles__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.what-u-learn .container > :nth-child(2) .circles__container p {
+  text-transform: uppercase;
+}
+.what-u-learn .container > :nth-child(2) .circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 100px;
+  background-color: #8B57C2;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
 }
 @media (min-width: 1440px) {
   .what-u-learn {
-    flex-direction: row;
-    padding-inline: 106px;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 120px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 36.32%, rgba(38, 35, 40, 0.75) 62.02%), url("../assets/backgrounds/bg6.png");
   }
@@ -939,49 +999,11 @@ body {
     text-align: left;
   }
 }
-.what-u-learn > :nth-child(2) {
-  margin: 40px 21px 0;
-  text-align: center;
-  width: 319px;
-}
-.what-u-learn > :nth-child(2) .circles {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 20px;
-}
-@media (min-width: 1440px) {
-  .what-u-learn > :nth-child(2) .circles {
-    justify-content: flex-start;
-    gap: 40px;
-  }
-}
-.what-u-learn > :nth-child(2) .circles__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-.what-u-learn > :nth-child(2) .circles__container p {
-  text-transform: uppercase;
-}
-.what-u-learn > :nth-child(2) .circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 100px;
-  background-color: #8B57C2;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 64px;
-  text-align: center;
-}
 
 .course-container {
   position: relative;
   background-color: white !important;
   height: 1226px;
-  margin-inline: -20px;
 }
 @media (min-width: 768px) {
   .course-container {
@@ -1876,6 +1898,11 @@ body {
   .book-place__top {
     padding-inline: 1px;
     margin-top: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .book-place__top {
+    margin-top: unset;
   }
 }
 .book-place__top ul {
