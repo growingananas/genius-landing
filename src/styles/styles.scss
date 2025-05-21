@@ -21,77 +21,127 @@
 @import '../styles/blocks/practice-for-companies.scss';
 @import '../styles/blocks/installments.scss';
 @import '../styles/blocks/book-place.scss';
+@import '../styles/blocks/popular-questions.scss';
 
-.popular-questions {
-  margin: $margin-top-mob 20px 0;
-  padding: 80px 12px;
-  background-color: $grey-background;
-  border-radius: 32px;
-
+.footerr {
   .container {
-    padding-inline: unset;
-
-    @include onDesktop {
-      max-width: 604px;
-    }
-  }
-  h2 {
-    text-align: center;
-  }
-  @include onTablet {
-    border-radius: unset;
-    margin-inline: unset;
-    margin-top: $margin-top-tab;
-  }
-
-  .faq-container {
+    margin:  $margin-top-mob auto 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 40px;
+    gap: 80px;
+
+    @include onTablet {
+      margin-top: $margin-top-tab;
+    }
   }
 
-  details {
-    background-color: #353535;
-    border-radius: 10px;
-    padding: 16px;
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-     &[open] .plus {
-      transform: rotate(45deg);   
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    h5 {
+      font-weight: 700;
+      font-size: 18px;
     }
 
-    summary {
+    &__left {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 20px;
-      line-height: 1.6;
+      flex-direction: column;
+      // justify-content: center;
+      text-align: center;
 
-      @include onTablet {
-        h4 {
-          font-size: 20px;
+      @include onDesktop {
+        justify-content: flex-start;
+        text-align: left;
+      }
+
+      gap: 32px;
+
+      .socials {
+        display: flex;
+        gap: 20px;
+      }
+    }
+
+    &__center {
+      max-width: 285px;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+      }
+
+      ul {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 32px;
+        row-gap: 12px;
+        margin-top: 20px;
+        li {
+          width: max-content;
         }
       }
     }
 
+    &__right {
+      h5 {
+        display: none;
+      }
 
-    div {
-      margin-top: 20px;
+      ul {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
     }
-  }
 
-  details summary {
-    list-style: none;
-  }
+    &__bottom {
+      padding: 40px 18px;
+      border-top: 1px solid #414141;
+       @include onDesktop {padding-inline: 0;}
 
-  details summary::-webkit-details-marker {
-    display: none;    
-  }
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        text-align: center;
 
-  .plus {
-    font-size: 52px;
-    color: $accent-color;
-    font-weight: 700;
-    transition: transform 0.3s ease;
+        @include onDesktop {
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: left;
+        }
+
+        li {
+          a {
+            font-size: 12px;
+            color: #D7D7D7;
+            letter-spacing: 0;
+          }
+        }
+
+        li:first-of-type a { 
+          font-weight: 700;
+        }
+      }; 
+    }
   }
 }
