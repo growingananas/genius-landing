@@ -1,14 +1,13 @@
-
 .footer-container {
     margin:  $margin-top-mob auto 0;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: clamp(40px, 40px + 1vw, 80px);
 
     @include onTablet {
       margin-top: $margin-top-tab;
     }
-  }
+}
 
 .footer {
   display: flex;
@@ -28,15 +27,13 @@
   &__left {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     text-align: center;
+    gap: 32px;
 
     @include onDesktop {
       justify-content: flex-start;
       text-align: left;
     }
-
-    gap: 32px;
 
     .socials {
       display: flex;

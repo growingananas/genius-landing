@@ -78,57 +78,92 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+let phoneInput;
+
 //added country code dropdown for the contact form
-
-
 document.addEventListener("DOMContentLoaded", function() {
 const phoneInputField = document.querySelector("#phone");
-const phoneInput = window.intlTelInput(phoneInputField, {
-initialCountry: "ua",
-geoIpLookup: function(callback) {
-fetch('https://ipinfo.io/json', { headers: { 'Accept': 'application/json' }})
-.then(response => response.json())
-.then(data => callback(data.country))
-.catch(() => callback('us'));
-},
-utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-});
-
-  //added validation for the contact form
-
-const form = document.getElementById('bookingForm');
-const inputs = form.querySelectorAll('required');
-
-inputs.forEach(input => {
-  input.addEventListener('input', () => {
-    if (input.checkValidity()) {
-      input.classList.remove('error');
-    } else {
-      input.classList.add('error');
-    }
+  phoneInput = window.intlTelInput(phoneInputField, {
+  initialCountry: "ua",
+  useFullscreenPopup: false,
+  //  dropdownContainer: document.querySelector(".phone-input-container"),
+  geoIpLookup: function(callback) {
+  fetch('https://ipinfo.io/json', { headers: { 'Accept': 'application/json' }})
+  .then(response => response.json())
+  .then(data => callback(data.country))
+  .catch(() => callback('us'));
+  },
+  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
   });
 });
 
-// Prevent non-numeric input for phone number
-phoneInputField.addEventListener('input', (e) => {
-  e.target.value = e.target.value.replace(/[^\d]/g, '');
-});
+//added validation for the contact form
 
-form.addEventListener('submit', (e) => {
-let valid = true;
-inputs.forEach(input => {
-  if (!input.checkValidity()) {
-    input.classList.add('error');
-    valid = false;
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById('bookingForm');
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const tel = document.getElementById('phone');
+
+  const errors = {
+    name: "",
+    email: "",
+    tel: ""
+  };
+
+  function showError(field, message) {
+    errors[field] = message;
+    document.getElementById(`${field}-error`).textContent = message;
+    const input = document.getElementById(field);
+    if (message) {
+      input.classList.add("error");
+    } else {
+      input.classList.remove("error");
+    }
   }
-});
-  if (!valid) {
-    e.preventDefault();
-    alert('Please fill out all fields correctly.');
+
+  function validateName() {
+    const value = name.value.trim(); {
+      if (value.length < 2) {
+        showError("name", "Ім’я повинно містити щонайменше 2 символи.");
+      } else {
+        showError("name", "");
+      }
+    }
   }
+
+  function validateEmail() {
+    const value = email.value.trim();
+    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    if (!emailPattern.test(value)) {
+      showError("email", "Будь ласка, введіть дійсну адресу електронної пошти.");
+    } else {
+      showError("email", "");
+    }
+  }
+
+   function validatePhone() {
+      if (!phoneInput.isValidNumber()) {
+        showError("phone", "Введіть дійсний міжнародний номер телефону.");
+      } else {
+        showError("phone", "");
+      }
+  }
+
+  name.addEventListener("input", validateName);
+  email.addEventListener("input", validateEmail);
+  tel.addEventListener("input", validatePhone);
+
+  form.addEventListener("submit", function (e) {
+    validateName();
+    validateEmail();
+    validatePhone();
+
+     const hasErrors = Object.values(errors).some(error => error !== '');
+
+      if (hasErrors) {
+      e.preventDefault();
+    }
+  });
 });
-
-});
-
-
-
