@@ -160,10 +160,15 @@ document.addEventListener("DOMContentLoaded", function () {
     validateEmail();
     validatePhone();
 
-     const hasErrors = Object.values(errors).some(error => error !== '');
+    const hasErrors = Object.values(errors).some(error => error !== '');
 
       if (hasErrors) {
       e.preventDefault();
+    } else {
+      name.value = '';
+      email.value = '';
+      tel.value = '';
     }
   });
 });
+
